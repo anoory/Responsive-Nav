@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(0, 195, 68);
+}
+header {
+  background: #e00808;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+header .logo {
+  font: size 30px;
+  text-transform: uppercase;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li a {
+  display: inline-block;
+  color: rgb(0, 160, 247);
+  padding: 5px 0;
+  margin: 0 5px;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+header nav ul li a:hover,
+header nav ul li a:active {
+  border-bottom-color: brown;
+}
+.Cars {
+  cursor: pointer;
+}
+.Cars div {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background: #070;
+}
+
+@media only screen and (max-width: 700px) {
+  .Cars {
+    display: block;
+  }
+  header nav {
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 70px;
+    background: #e00808;
+    padding: 30px;
+    transition: left 0.3s ease;
+  }
+  #nav_check:checked ~ nav {
+    left: 0;
+  }
+}
